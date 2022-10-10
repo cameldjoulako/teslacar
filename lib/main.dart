@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 
     return MaterialApp(
-      title: 'Recipesaap',
+      title: 'TeslaCar',
       debugShowCheckedModeBanner: false,
       theme: AppThemes.main(),
       home: const RecipesPage(),
