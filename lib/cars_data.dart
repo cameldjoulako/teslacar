@@ -1,14 +1,16 @@
 import 'package:teslacar/utils/styles/app_colors.dart';
-import 'package:teslacar/models/recipe.dart';
+import 'package:teslacar/models/car.dart';
 
-class RecipesData {
-  static const List<Recipe> dessertMenu = [
-    Recipe(
+class CarsData {
+  static const List<Car> dessertMenu = [
+    Car(
       id: 1,
-      title: 'Lemon Cheesecake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'Tart Lemon Cheesecake sits atop an almond-graham cracker crust to add a delightful nuttiness to the traditional graham cracker crust. Finish the cheesecake with lemon curd for double the tart pucker!',
-      ingredients: [
+      models: [
         '110g digestive biscuits',
         '50g butter',
         '25g light brown soft sugar',
@@ -24,14 +26,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/01-lemon-cheesecake.png',
       bgImageName: '01-lemon-cheesecake-bg',
-      bgColor: AppColors.yellow,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 2,
-      title: 'Macaroons',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'Soft and chewy on the inside, crisp and golden on the outside — these are the perfect macaroons.',
-      ingredients: [
+      models: [
         '1 ¾ cups powdered sugar(210 g)',
         '1 cup almond flour(95 g), finely ground',
         '1 teaspoon salt, divided',
@@ -60,14 +64,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/05-macaroons.png',
       bgImageName: '',
-      bgColor: AppColors.primary,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 3,
-      title: 'Cream Cupcakes',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           "Bake these easy vanilla cupcakes in just 35 minutes. Perfect for birthdays, picnics or whenever you fancy a sweet treat, they're sure to be a crowd-pleaser",
-      ingredients: [
+      models: [
         '',
       ],
       instructions: [
@@ -75,14 +81,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/08-cream-cupcakes.png',
       bgImageName: '',
-      bgColor: AppColors.pinkLight,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 4,
-      title: 'Chocolate Cheesecake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           "Treat family and friends to this decadent chocolate dessert. It's an indulgent end to a dinner party or weekend family meal",
-      ingredients: [
+      models: [
         '150g digestive biscuits (about 10)',
         '1 tbsp caster sugar',
         '45g butter, melted, plus extra for the tin',
@@ -99,14 +107,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/02-chocolate-cake-1.png',
       bgImageName: '',
-      bgColor: AppColors.orangeDark,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 5,
-      title: 'Fruit Plate',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           "Melons - they're firmer so make a great base for the softer berries and fruits. Tropical fruit - the top of a pineapple can be included for height, while dragonfruit looks vibrant.",
-      ingredients: [
+      models: [
         '',
       ],
       instructions: [
@@ -114,14 +124,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/09-fruit-plate.png',
       bgImageName: '',
-      bgColor: AppColors.green,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 6,
-      title: 'Chocolate Donuts',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'Moist and fluffy donuts that are baked, not fried, and full of chocolate. Covered in a thick chocolate glaze, these are perfect for any chocoholic who wants a chocolate version of this classic treat.',
-      ingredients: [
+      models: [
         '1 cup (140g) all-purpose flour',
         '1/4 cup (25g) unsweetened cocoa powder',
         '1/2 teaspoon baking powder',
@@ -145,14 +157,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/03-chocolate-donuts.png',
       bgImageName: '',
-      bgColor: AppColors.sugar,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 7,
-      title: 'Strawberry Cake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'Jam-packed with fresh strawberries, this strawberry cake is one of the simplest, most delicious cakes you’ll ever make.',
-      ingredients: [
+      models: [
         '',
       ],
       instructions: [
@@ -160,14 +174,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/13-strawberry-powdered-cake.png',
       bgImageName: '',
-      bgColor: AppColors.red,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 8,
-      title: 'Fluffy Cake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           "This is a very good everyday cake leavened with baking powder. It's relatively light—it isn't loaded with butter, and it calls for only 2 eggs and 2 percent milk. Mine was perfectly baked after 30 minutes. After 10 minutes on the cooling rack, the cake released from the pans easily.",
-      ingredients: [
+      models: [
         '1/2 cup (1 stick) unsalted butter, cut into 2-tablespoon pieces and softened; plus more for coating pans',
         '2 1/4 cups all-purpose flour, plus more for coating pans',
         '1 1/3 cups granulated sugar',
@@ -178,9 +194,9 @@ class RecipesData {
         '2 large eggs, room temperature',
       ],
       instructions: [
-        'Gather the ingredients. Preheat the oven to 350 F.',
+        'Gather the models. Preheat the oven to 350 F.',
         'Butter and flour two 9-inch cake pans. If desired, line the bottom with a circle of parchment',
-        'Combine the sugar, flour, baking powder, and salt in the bowl of a stand mixer fitted with the paddle attachment. Mix until the dry ingredients are combined.',
+        'Combine the sugar, flour, baking powder, and salt in the bowl of a stand mixer fitted with the paddle attachment. Mix until the dry models are combined.',
         'With the mixer on the lowest speed, add the butter one chunk at a time and blend until the mixture looks sandy, between 30 seconds and 1 minute. Scrape down the bowl and paddle with a rubber spatula.',
         'Add the vanilla extract and, with the mixer on low, pour in the milk. Stop and scrape, then mix for another minute.',
         'Add the first egg and mix on medium-low until completely incorporated. Add the second egg and do the same. Scrape down the bowl and mix until fluffy on medium speed, about 30 seconds.',
@@ -191,14 +207,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/04-fluffy-cake.png',
       bgImageName: '',
-      bgColor: AppColors.orangeDark,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 9,
-      title: 'White Cream Cake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'This White Chocolate Cake is both decadent and delicious! White chocolate is incorporated into the cake layers, the frosting, and the drip for a stunning monochrome effect.',
-      ingredients: [
+      models: [
         '2 ½ cups all-purpose flour',
         '1 teaspoon baking soda',
         '½ teaspoon baking powder',
@@ -226,14 +244,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/06-white-cream-cake.png',
       bgImageName: '',
-      bgColor: AppColors.sugar,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 10,
-      title: 'Fruit Pie',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'Bake a hearty fruit pie for dessert. Our collection of year-round pastry classics includes apple & blackberry, summer berries, lemon meringue and mince pies.',
-      ingredients: [
+      models: [
         '',
       ],
       instructions: [
@@ -241,14 +261,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/14-fruit-pie.png',
       bgImageName: '',
-      bgColor: AppColors.yellow,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 11,
-      title: 'Honey Cake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           "The secret to this cake's fantastic flavor is the tiny amount of bitterness from burnt honey. The slightly tangy whipped cream frosting provides a bit of acidity and lovely light texture, and unlike other frostings, it's not too sweet",
-      ingredients: [
+      models: [
         '¾ cup wildflower honey',
         '3 tablespoons cold water',
         '1 cup white sugar',
@@ -277,14 +299,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/07-honey-cake.png',
       bgImageName: '',
-      bgColor: AppColors.honey,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 12,
-      title: 'Powdered Cake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           'Heavy on the butter and nutmeg, this cake has all the flavors of your favorite cake donut in a convenient square shape.',
-      ingredients: [
+      models: [
         '',
       ],
       instructions: [
@@ -292,14 +316,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/11-powdered-cake.png',
       bgImageName: '',
-      bgColor: AppColors.sugar,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 13,
-      title: 'Strawberries',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
           "We'll admit it: we go a little crazy during strawberry season. Though easy to grow, these sweet berries just taste better when you get them in season, as opposed to buying them at other times of the year.",
-      ingredients: [
+      models: [
         '',
       ],
       instructions: [
@@ -307,14 +333,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/10-strawberries.png',
       bgImageName: '',
-      bgColor: AppColors.red,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 14,
-      title: 'Chocolate Cake',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
-          'The Best Chocolate Cake Recipe – A one bowl chocolate cake recipe that is quick, easy, and delicious! Updated with gluten-free, dairy-free, and egg-free options!',
-      ingredients: [
+          'The Best Chocolate Cake Car – A one bowl chocolate cake car that is quick, easy, and delicious! Updated with gluten-free, dairy-free, and egg-free options!',
+      models: [
         '',
       ],
       instructions: [
@@ -322,14 +350,16 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/12-chocolate-cake-2.png',
       bgImageName: '',
-      bgColor: AppColors.orangeDark,
+      bgColor: AppColors.white,
     ),
-    Recipe(
+    Car(
       id: 15,
-      title: 'Apple Pie',
+      price: '250',
+      date: '2020',
+      title: 'Tesla BMW i',
       description:
-          "This was my grandmother's apple pie recipe. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions.",
-      ingredients: [
+          "This was my grandmother's apple pie car. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions.",
+      models: [
         '',
       ],
       instructions: [
@@ -337,7 +367,7 @@ class RecipesData {
       ],
       image: 'assets/images/desserts/15-apple-pie.png',
       bgImageName: '',
-      bgColor: AppColors.sugar,
+      bgColor: AppColors.white,
     ),
   ];
 }

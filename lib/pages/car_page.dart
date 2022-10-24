@@ -5,27 +5,27 @@ import 'package:flutter/rendering.dart';
 import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/widgets/fade_in_effect.dart';
-import 'package:teslacar/widgets/ingredients_section.dart';
-import 'package:teslacar/widgets/instructions_section.dart';
-import 'package:teslacar/models/recipe.dart';
-import 'package:teslacar/widgets/recipe_page_sidebar.dart';
-import 'package:teslacar/widgets/recipe_page_sliver_app_bar.dart';
+import 'package:teslacar/widgets/models_section.dart';
+import 'package:teslacar/widgets/descriptions_section.dart';
+import 'package:teslacar/models/car.dart';
+import 'package:teslacar/widgets/car_page_sidebar.dart';
+import 'package:teslacar/widgets/car_page_sliver_app_bar.dart';
 
-class RecipePage extends StatefulWidget {
-  const RecipePage(
-    this.recipe, {
+class CarPage extends StatefulWidget {
+  const CarPage(
+    this.car, {
     Key? key,
     this.initialImageRotationAngle = 0,
   }) : super(key: key);
 
-  final Recipe recipe;
+  final Car car;
   final double initialImageRotationAngle;
 
   @override
-  State<RecipePage> createState() => _RecipePageState();
+  State<CarPage> createState() => _CarPageState();
 }
 
-class _RecipePageState extends State<RecipePage> {
+class _CarPageState extends State<CarPage> {
   final ScrollController scrollController = ScrollController();
   late final ValueNotifier<double> imageRotationAngleNotifier;
 
@@ -60,8 +60,8 @@ class _RecipePageState extends State<RecipePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          widget.recipe.bgColor == AppColors.sugar ? AppColors.yellow : null,
+      backgroundColor: Colors.red,
+      //widget.car.bgColor == AppColors.sugar ? AppColors.yellow : null,
       body: Row(
         children: [
           if (ScreenSize.of(context).isLarge)
@@ -70,8 +70,8 @@ class _RecipePageState extends State<RecipePage> {
               child: ValueListenableBuilder(
                 valueListenable: imageRotationAngleNotifier,
                 builder: (context, double imageRotationAngle, child) {
-                  return RecipePageSidebar(
-                    widget.recipe,
+                  return CarPageSidebar(
+                    widget.car,
                     imageRotationAngle: imageRotationAngle,
                   );
                 },
@@ -87,9 +87,9 @@ class _RecipePageState extends State<RecipePage> {
                   ValueListenableBuilder(
                     valueListenable: imageRotationAngleNotifier,
                     builder: (context, double imageRotationAngle, child) {
-                      return RecipePageSliverAppBar(
+                      return CarPageSliverAppBar(
                         imageRotationAngle: imageRotationAngle,
-                        recipe: widget.recipe,
+                        car: widget.car,
                       );
                     },
                   ),
@@ -101,17 +101,17 @@ class _RecipePageState extends State<RecipePage> {
                   sliver: SliverList(
                     delegate: SliverChildListDelegate([
                       Hero(
-                        tag: '__recipe_${widget.recipe.id}_title__',
+                        tag: '__car_${widget.car.id}_title__',
                         child: Text(
-                          widget.recipe.title,
+                          widget.car.title,
                           style: Theme.of(context).textTheme.headline4!,
                         ),
                       ),
                       const SizedBox(height: 10),
                       Hero(
-                        tag: '__recipe_${widget.recipe.id}_description__',
+                        tag: '__car_${widget.car.id}_description__',
                         child: Text(
-                          widget.recipe.description,
+                          widget.car.description,
                           style: Theme.of(context).textTheme.bodyText2!,
                         ),
                       ),
@@ -124,7 +124,7 @@ class _RecipePageState extends State<RecipePage> {
                           style: Theme.of(context).textTheme.headline5,
                         ),
                       ),
-                      IngredientsSection(widget.recipe),
+                      ModelsSection(widget.car),
                       FadeInEffect(
                         keepAlive: true,
                         child: Text(
@@ -132,7 +132,7 @@ class _RecipePageState extends State<RecipePage> {
                           style: Theme.of(context).textTheme.headline5,
                         ),
                       ),
-                      InstructionsSection(widget.recipe),
+                      InstructionsSection(widget.car),
                     ]),
                   ),
                 ),

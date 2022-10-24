@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
-import 'package:teslacar/models/recipe.dart';
-import 'package:teslacar/widgets/recipe_list_item_text_wrapper.dart';
+import 'package:teslacar/models/car.dart';
+import 'package:teslacar/widgets/car_list_item_text_wrapper.dart';
 
-class RecipeListItemText extends StatelessWidget {
-  const RecipeListItemText(
-    this.menuItem, {
+class CarListItemText extends StatelessWidget {
+  const CarListItemText(
+    this.carItem, {
     Key? key,
   }) : super(key: key);
 
-  final Recipe menuItem;
+  final Car carItem;
 
   @override
   Widget build(BuildContext context) {
-    return RecipeListItemTextWrapper(
+    return CarListItemTextWrapper(
       child: Padding(
         padding: EdgeInsets.only(
           left: 20,
@@ -22,31 +22,30 @@ class RecipeListItemText extends StatelessWidget {
           top: ScreenSize.of(context).isLarge ? 40 : 20,
           bottom: 20,
         ),
-        child: Column(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: ScreenSize.of(context).isLarge
               ? MainAxisAlignment.start
               : MainAxisAlignment.end,
           children: [
             Hero(
-              tag: '__recipe_${menuItem.id}_title__',
+              tag: '__car_${carItem.id}_title__',
               child: Text(
-                menuItem.title,
+                carItem.price,
                 style: Theme.of(context).textTheme.headline4!.copyWith(
-                      color:
-                          AppColors.textColorFromBackground(menuItem.bgColor),
+                      color: AppColors.textColorFromBackground(carItem.bgColor),
                     ),
               ),
             ),
             const SizedBox(height: 10),
             Flexible(
               child: Hero(
-                tag: '__recipe_${menuItem.id}_description__',
+                tag: '__car_${carItem.id}_description__',
                 child: Text(
-                  menuItem.description,
+                  carItem.description,
                   style: Theme.of(context).textTheme.subtitle1!.copyWith(
                         color:
-                            AppColors.textColorFromBackground(menuItem.bgColor),
+                            AppColors.textColorFromBackground(carItem.bgColor),
                       ),
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,

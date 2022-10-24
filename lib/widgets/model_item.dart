@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
-import 'package:teslacar/models/recipe.dart';
+import 'package:teslacar/models/car.dart';
 
-class IngredientItem extends StatelessWidget {
-  const IngredientItem(
-    this.recipe, {
+class ModelItem extends StatelessWidget {
+  const ModelItem(
+    this.car, {
     Key? key,
-    required this.ingredient,
+    required this.model,
   }) : super(key: key);
 
-  final Recipe recipe;
-  final String ingredient;
+  final Car car;
+  final String model;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class IngredientItem extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(35),
-        border: Border.all(color: recipe.bgColor, width: 2),
+        border: Border.all(color: car.bgColor, width: 2),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,12 +31,12 @@ class IngredientItem extends StatelessWidget {
               padding: const EdgeInsets.all(13),
               margin: const EdgeInsets.only(right: 15),
               decoration: BoxDecoration(
-                color: recipe.bgColor,
+                color: car.bgColor,
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
                     color: AppColors.orangeDark.withOpacity(
-                      AppColors.getBrightness(recipe.bgColor) == Brightness.dark
+                      AppColors.getBrightness(car.bgColor) == Brightness.dark
                           ? 0.5
                           : 0.2,
                     ),
@@ -49,7 +49,7 @@ class IngredientItem extends StatelessWidget {
                 angle: -0.3,
                 child: Image.asset(
                   'assets/images/chef.png',
-                  color: AppColors.textColorFromBackground(recipe.bgColor),
+                  color: AppColors.textColorFromBackground(car.bgColor),
                 ),
               ),
             ),
@@ -62,7 +62,7 @@ class IngredientItem extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(10),
                   child: Text(
-                    ingredient,
+                    model,
                     style: Theme.of(context).textTheme.bodyText2!,
                   ),
                 ),

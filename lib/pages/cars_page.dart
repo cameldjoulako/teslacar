@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:teslacar/utils/screen_size.dart';
-import 'package:teslacar/recipes_data.dart';
-import 'package:teslacar/recipes_layout.dart';
-import 'package:teslacar/widgets/recipe_list_item.dart';
-import 'package:teslacar/widgets/recipe_list_item_wrapper.dart';
+import 'package:teslacar/cars_data.dart';
+import 'package:teslacar/cars_layout.dart';
+import 'package:teslacar/widgets/car_list_item.dart';
+import 'package:teslacar/widgets/car_list_item_wrapper.dart';
 
-class RecipesPage extends StatefulWidget {
-  const RecipesPage({Key? key}) : super(key: key);
+class CarsPage extends StatefulWidget {
+  const CarsPage({Key? key}) : super(key: key);
 
   @override
-  State<RecipesPage> createState() => _RecipesPageState();
+  State<CarsPage> createState() => _CarsPageState();
 }
 
-class _RecipesPageState extends State<RecipesPage> {
+class _CarsPageState extends State<CarsPage> {
   final ValueNotifier<ScrollDirection> scrollDirectionNotifier =
       ValueNotifier<ScrollDirection>(ScrollDirection.forward);
 
@@ -39,17 +39,17 @@ class _RecipesPageState extends State<RecipesPage> {
             bottom: MediaQuery.of(context).padding.bottom + 20,
           ),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: RecipesLayout.of(context).gridCrossAxisCount,
-            childAspectRatio: RecipesLayout.of(context).gridChildAspectRatio,
+            crossAxisCount: CarsLayout.of(context).gridCrossAxisCount,
+            childAspectRatio: CarsLayout.of(context).gridChildAspectRatio,
           ),
-          itemCount: RecipesData.dessertMenu.length,
+          itemCount: CarsData.dessertMenu.length,
           cacheExtent: 0,
           itemBuilder: (context, i) {
             return ValueListenableBuilder(
               valueListenable: scrollDirectionNotifier,
-              child: RecipeListItem(RecipesData.dessertMenu[i]),
+              child: CarListItem(CarsData.dessertMenu[i]),
               builder: (context, ScrollDirection scrollDirection, child) {
-                return RecipeListItemWrapper(
+                return CarListItemWrapper(
                   scrollDirection: scrollDirection,
                   child: child!,
                 );

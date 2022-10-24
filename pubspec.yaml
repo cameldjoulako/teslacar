@@ -74,3 +74,5 @@ flutter:
           weight: 500
         - asset: assets/fonts/Rubik-Light.ttf
           weight: 300
+        - asset: assets/fonts/Rubik-Light.ttf
+          weight: 800

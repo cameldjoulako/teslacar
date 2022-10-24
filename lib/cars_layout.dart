@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/screen_size.dart';
 
-class RecipesLayout {
+class CarsLayout {
   final BuildContext context;
 
-  RecipesLayout(this.context);
+  CarsLayout(this.context);
 
-  static RecipesLayout of(BuildContext context) {
-    return RecipesLayout(context);
+  static CarsLayout of(BuildContext context) {
+    return CarsLayout(context);
   }
 
   int get gridCrossAxisCount {
@@ -40,7 +40,7 @@ class RecipesLayout {
     }
   }
 
-  double get recipeImageSize {
+  double get carImageSize {
     double screenWidth = MediaQuery.of(context).size.width;
     return screenWidth * 0.45 / gridCrossAxisCount;
   }

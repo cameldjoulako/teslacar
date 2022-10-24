@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:teslacar/utils/styles/app_themes.dart';
-import 'package:teslacar/models/recipe.dart';
-import 'package:teslacar/recipes_data.dart';
-import 'package:teslacar/pages/recipes_page.dart';
+import 'package:teslacar/models/car.dart';
+import 'package:teslacar/cars_data.dart';
+import 'package:teslacar/pages/cars_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void didChangeDependencies() {
     if (_isInit) {
-      for (Recipe menuItem in RecipesData.dessertMenu) {
+      for (Car menuItem in CarsData.dessertMenu) {
         precacheImage(Image.asset(menuItem.image).image, context);
       }
     }
@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
       title: 'TeslaCar',
       debugShowCheckedModeBanner: false,
       theme: AppThemes.main(),
-      home: const RecipesPage(),
+      home: const CarsPage(),
     );
   }
 }

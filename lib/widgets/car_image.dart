@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
-import 'package:teslacar/models/recipe.dart';
+import 'package:teslacar/models/car.dart';
 
-class RecipeImage extends StatelessWidget {
-  const RecipeImage(
-    this.recipe, {
+class CarImage extends StatelessWidget {
+  const CarImage(
+    this.car, {
     Key? key,
     this.imageRotationAngle = 0,
     this.imageSize,
@@ -13,7 +13,7 @@ class RecipeImage extends StatelessWidget {
     this.shadowOffset,
   }) : super(key: key);
 
-  final Recipe recipe;
+  final Car car;
   final double imageRotationAngle;
   final double? imageSize;
   final AlignmentGeometry alignment;
@@ -25,7 +25,7 @@ class RecipeImage extends StatelessWidget {
     return Align(
       alignment: alignment,
       child: Hero(
-        tag: '__recipe_${recipe.id}_image__',
+        tag: '__car_${car.id}_image__',
         // Todo: MAYBE add a TweenAnimationBuilder for smoother animation??
         child: SizedBox(
           width: imageSize,
@@ -38,7 +38,7 @@ class RecipeImage extends StatelessWidget {
                 child: Transform.rotate(
                   angle: imageRotationAngle,
                   child: Image.asset(
-                    recipe.image,
+                    car.image,
                     width: imageSize,
                   ),
                 ),

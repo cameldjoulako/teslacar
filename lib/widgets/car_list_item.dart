@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
-import 'package:teslacar/models/recipe.dart';
-import 'package:teslacar/recipes_layout.dart';
-import 'package:teslacar/pages/recipe_page.dart';
-import 'package:teslacar/widgets/recipe_image.dart';
-import 'package:teslacar/widgets/recipe_list_item_gesture_detector.dart';
-import 'package:teslacar/widgets/recipe_list_item_image_wrapper.dart';
-import 'package:teslacar/widgets/recipe_list_item_text.dart';
+import 'package:teslacar/models/car.dart';
+import 'package:teslacar/cars_layout.dart';
+import 'package:teslacar/pages/car_page.dart';
+import 'package:teslacar/widgets/car_image.dart';
+import 'package:teslacar/widgets/car_list_item_gesture_detector.dart';
+import 'package:teslacar/widgets/car_list_item_image_wrapper.dart';
+import 'package:teslacar/widgets/car_list_item_text.dart';
 
-class RecipeListItem extends StatefulWidget {
-  const RecipeListItem(
-    this.recipe, {
+class CarListItem extends StatefulWidget {
+  const CarListItem(
+    this.car, {
     Key? key,
   }) : super(key: key);
 
-  final Recipe recipe;
+  final Car car;
 
   @override
-  State<RecipeListItem> createState() => _RecipeListItemState();
+  State<CarListItem> createState() => _CarListItemState();
 }
 
-class _RecipeListItemState extends State<RecipeListItem> {
-  double recipeImageRotationAngle = 0;
+class _CarListItemState extends State<CarListItem> {
+  double carImageRotationAngle = 0;
 
   @override
   Widget build(BuildContext context) {
-    double imageSize = RecipesLayout.of(context).recipeImageSize;
+    double imageSize = CarsLayout.of(context).carImageSize;
 
-    return RecipeListItemGestureDetector(
+    return CarListItemGestureDetector(
       onTap: () {
         Navigator.of(context)
             .push(
@@ -36,9 +36,9 @@ class _RecipeListItemState extends State<RecipeListItem> {
             transitionDuration: const Duration(milliseconds: 300),
             pageBuilder:
                 (BuildContext context, Animation<double> animation, _) {
-              return RecipePage(
-                widget.recipe,
-                initialImageRotationAngle: recipeImageRotationAngle,
+              return CarPage(
+                widget.car,
+                initialImageRotationAngle: carImageRotationAngle,
               );
             },
             transitionsBuilder: (BuildContext context,
@@ -53,7 +53,7 @@ class _RecipeListItemState extends State<RecipeListItem> {
             .then((response) {
           if (response != null && response is double && mounted) {
             setState(() {
-              recipeImageRotationAngle = response;
+              carImageRotationAngle = response;
             });
           }
         });
@@ -62,18 +62,18 @@ class _RecipeListItemState extends State<RecipeListItem> {
         padding: EdgeInsets.all(ScreenSize.of(context).isLarge ? 15 : 12.5),
         child: Stack(
           children: [
-            Positioned.fill(
+            /*Positioned.fill(
               child: Hero(
-                tag: '__recipe_${widget.recipe.id}_image_bg__',
+                tag: '__car_${widget.car.id}_image_bg__',
                 child: Container(
-                  alignment: Alignment.bottomRight,
+                  //alignment: Alignment.bottomRight,
                   decoration: BoxDecoration(
-                    color: widget.recipe.bgColor,
+                    color: widget.car.bgColor,
                     borderRadius: BorderRadius.circular(35),
                     boxShadow: [
                       BoxShadow(
                         color: AppColors.orangeDark.withOpacity(
-                          AppColors.getBrightness(widget.recipe.bgColor) ==
+                          AppColors.getBrightness(widget.car.bgColor) ==
                                   Brightness.dark
                               ? 0.5
                               : 0.2,
@@ -83,31 +83,36 @@ class _RecipeListItemState extends State<RecipeListItem> {
                       ),
                     ],
                   ),
-                  // child: RecipeListItemImage(recipe),
+                  // child: CarListItemImage(car),
                 ),
               ),
             ),
             Positioned.fill(
+              top: 0,
               child: Container(
-                alignment: Alignment.bottomRight,
-                child: RecipeListItemImageWrapper(
-                  child: RecipeImage(
-                    widget.recipe,
-                    imageRotationAngle: recipeImageRotationAngle,
-                    imageSize: imageSize,
-                    alignment: Alignment.bottomRight,
-                    hasShadow: false,
-                  ),
+                alignment: Alignment.topLeft,
+                child: Row(
+                  children: [
+                    CarListItemImageWrapper(
+                      child: CarImage(
+                        widget.car,
+                        imageRotationAngle: carImageRotationAngle,
+                        imageSize: imageSize,
+                        alignment: Alignment.topLeft,
+                        hasShadow: false,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            */
             Row(
               children: [
                 Expanded(
                   flex: 3,
-                  child: RecipeListItemText(widget.recipe),
+                  child: CarListItemText(widget.car),
                 ),
-                Expanded(flex: 2, child: Container()),
               ],
             ),
           ],

@@ -3,24 +3,24 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
-import 'package:teslacar/models/recipe.dart';
+import 'package:teslacar/models/car.dart';
 
-class RecipeImagePattern extends StatelessWidget {
-  const RecipeImagePattern(
-    this.recipe, {
+class CarImagePattern extends StatelessWidget {
+  const CarImagePattern(
+    this.car, {
     Key? key,
     this.offset = Offset.zero,
     required this.borderRadius,
   }) : super(key: key);
 
-  final Recipe recipe;
+  final Car car;
   final BorderRadius borderRadius;
   final Offset offset;
 
   @override
   Widget build(BuildContext context) {
     String bgImage =
-        ScreenSize.of(context).isLarge ? recipe.bgImageLg : recipe.bgImage;
+        ScreenSize.of(context).isLarge ? car.bgImageLg : car.bgImage;
     AlignmentGeometry alignment = ScreenSize.of(context).isLarge
         ? Alignment.center
         : Alignment.bottomCenter;

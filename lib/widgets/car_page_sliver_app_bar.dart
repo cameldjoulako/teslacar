@@ -4,21 +4,21 @@ import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/widgets/adaptive_offset_effect.dart';
 import 'package:teslacar/widgets/app_bar_leading.dart';
 import 'package:teslacar/widgets/fade_in_effect.dart';
-import 'package:teslacar/models/recipe.dart';
-import 'package:teslacar/widgets/recipe_image.dart';
-import 'package:teslacar/widgets/recipe_image_pattern.dart';
-import 'package:teslacar/widgets/recipe_page_image_bg.dart';
+import 'package:teslacar/models/car.dart';
+import 'package:teslacar/widgets/car_image.dart';
+import 'package:teslacar/widgets/car_image_pattern.dart';
+import 'package:teslacar/widgets/car_page_image_bg.dart';
 
-class RecipePageSliverAppBar extends StatelessWidget {
-  const RecipePageSliverAppBar({
+class CarPageSliverAppBar extends StatelessWidget {
+  const CarPageSliverAppBar({
     Key? key,
-    required this.recipe,
+    required this.car,
     this.expandedHeight = 340,
     this.collapsedHeight = 200,
     this.imageRotationAngle = 0,
   }) : super(key: key);
 
-  final Recipe recipe;
+  final Car car;
   final double expandedHeight;
   final double? collapsedHeight;
   final double imageRotationAngle;
@@ -33,18 +33,18 @@ class RecipePageSliverAppBar extends StatelessWidget {
       backgroundColor: Colors.transparent,
       collapsedHeight: collapsedHeight,
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarBrightness: AppColors.getBrightness(recipe.bgColor),
+        statusBarBrightness: AppColors.getBrightness(car.bgColor),
       ),
       leading: AppBarLeading(
         popValue: imageRotationAngle,
-        bgColor: AppColors.textColorFromBackground(recipe.bgColor),
+        bgColor: AppColors.textColorFromBackground(car.bgColor),
       ),
       expandedHeight: expandedHeight + MediaQuery.of(context).padding.top,
       flexibleSpace: AdaptiveOffsetEffect.builder(
         width: MediaQuery.of(context).size.width,
         height: expandedHeight,
-        child: RecipePageImageBg(
-          recipe,
+        child: CarPageImageBg(
+          car,
           borderRadius: const BorderRadius.only(
             bottomRight: Radius.circular(35),
             bottomLeft: Radius.circular(35),
@@ -54,15 +54,15 @@ class RecipePageSliverAppBar extends StatelessWidget {
           return Stack(
             children: [
               child!,
-              if (recipe.bgImage.isNotEmpty)
+              if (car.bgImage.isNotEmpty)
                 FlexibleSpaceBar(
                   background: FadeInEffect(
                     intervalStart: 0.5,
                     child: Opacity(
                       opacity: 0.6,
-                      child: RecipeImagePattern(
+                      child: CarImagePattern(
                         offset: offset,
-                        recipe,
+                        car,
                         borderRadius: const BorderRadius.only(
                           bottomRight: Radius.circular(35),
                           bottomLeft: Radius.circular(35),
@@ -75,8 +75,8 @@ class RecipePageSliverAppBar extends StatelessWidget {
                 bottom: false,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: RecipeImage(
-                    recipe,
+                  child: CarImage(
+                    car,
                     imageRotationAngle: imageRotationAngle,
                     imageSize: imageSize,
                     shadowOffset: offset * 0.6,

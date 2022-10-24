@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:teslacar/widgets/adaptive_offset_effect.dart';
 import 'package:teslacar/widgets/app_bar_leading.dart';
 import 'package:teslacar/widgets/fade_in_effect.dart';
-import 'package:teslacar/models/recipe.dart';
-import 'package:teslacar/widgets/recipe_image.dart';
-import 'package:teslacar/widgets/recipe_image_pattern_mouse.dart';
-import 'package:teslacar/widgets/recipe_page_image_bg.dart';
+import 'package:teslacar/models/car.dart';
+import 'package:teslacar/widgets/car_image.dart';
+import 'package:teslacar/widgets/car_image_pattern_mouse.dart';
+import 'package:teslacar/widgets/car_page_image_bg.dart';
 
-class RecipePageSidebar extends StatelessWidget {
-  const RecipePageSidebar(
-    this.recipe, {
+class CarPageSidebar extends StatelessWidget {
+  const CarPageSidebar(
+    this.car, {
     Key? key,
     this.imageRotationAngle = 0,
   }) : super(key: key);
 
-  final Recipe recipe;
+  final Car car;
   final double imageRotationAngle;
 
   @override
@@ -24,8 +24,8 @@ class RecipePageSidebar extends StatelessWidget {
     return AdaptiveOffsetEffect.builder(
       width: screenSize.width / 2,
       height: screenSize.height,
-      child: RecipePageImageBg(
-        recipe,
+      child: CarPageImageBg(
+        car,
         borderRadius: const BorderRadius.only(
           bottomRight: Radius.circular(35),
           topRight: Radius.circular(35),
@@ -34,11 +34,11 @@ class RecipePageSidebar extends StatelessWidget {
       childBuilder: (context, offset, child) => Stack(
         children: [
           child!,
-          if (recipe.bgImageName.isNotEmpty)
+          if (car.bgImageName.isNotEmpty)
             FadeInEffect(
               intervalStart: 0.5,
-              child: RecipeImagePatternMouse(
-                recipe,
+              child: CarImagePatternMouse(
+                car,
                 offset: offset,
                 borderRadius: const BorderRadius.only(
                   bottomRight: Radius.circular(35),
@@ -51,8 +51,8 @@ class RecipePageSidebar extends StatelessWidget {
             child: Center(
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.4,
-                child: RecipeImage(
-                  recipe,
+                child: CarImage(
+                  car,
                   imageRotationAngle: imageRotationAngle,
                   shadowOffset: offset * 0.5,
                 ),
@@ -63,7 +63,7 @@ class RecipePageSidebar extends StatelessWidget {
             top: 20,
             left: 20,
             child: AppBarLeading(
-              text: 'Back to Recipes',
+              text: 'Back to Cars list',
               popValue: imageRotationAngle,
             ),
           ),

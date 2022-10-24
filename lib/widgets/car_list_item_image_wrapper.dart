@@ -2,8 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-class RecipeListItemImageWrapper extends StatefulWidget {
-  const RecipeListItemImageWrapper({
+class CarListItemImageWrapper extends StatefulWidget {
+  const CarListItemImageWrapper({
     Key? key,
     required this.child,
     this.playOnce = false,
@@ -13,11 +13,11 @@ class RecipeListItemImageWrapper extends StatefulWidget {
   final bool playOnce;
 
   @override
-  State<RecipeListItemImageWrapper> createState() =>
-      _RecipeListItemImageWrapperState();
+  State<CarListItemImageWrapper> createState() =>
+      _CarListItemImageWrapperState();
 }
 
-class _RecipeListItemImageWrapperState extends State<RecipeListItemImageWrapper>
+class _CarListItemImageWrapperState extends State<CarListItemImageWrapper>
     with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   late final AnimationController animationController;
   late final Animation<double> scaleAnimation;

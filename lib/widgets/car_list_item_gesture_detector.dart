@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RecipeListItemGestureDetector extends StatefulWidget {
-  const RecipeListItemGestureDetector({
+class CarListItemGestureDetector extends StatefulWidget {
+  const CarListItemGestureDetector({
     Key? key,
     required this.child,
     required this.onTap,
@@ -11,12 +11,11 @@ class RecipeListItemGestureDetector extends StatefulWidget {
   final VoidCallback onTap;
 
   @override
-  State<RecipeListItemGestureDetector> createState() =>
-      _RecipeListItemGestureDetectorState();
+  State<CarListItemGestureDetector> createState() =>
+      _CarListItemGestureDetectorState();
 }
 
-class _RecipeListItemGestureDetectorState
-    extends State<RecipeListItemGestureDetector>
+class _CarListItemGestureDetectorState extends State<CarListItemGestureDetector>
     with SingleTickerProviderStateMixin {
   late final AnimationController animationController;
   late final Animation<double> scaleAnimation;
