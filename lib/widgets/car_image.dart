@@ -28,7 +28,7 @@ class CarImage extends StatelessWidget {
         tag: '__car_${car.id}_image__',
         // Todo: MAYBE add a TweenAnimationBuilder for smoother animation??
         child: SizedBox(
-          width: imageSize,
+          width: (imageSize),
           height: imageSize,
           child: Stack(
             clipBehavior: Clip.none,

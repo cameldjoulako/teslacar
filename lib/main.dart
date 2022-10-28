@@ -32,10 +32,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-
     return MaterialApp(
-      title: 'TeslaCar',
+      title: 'TeslaCars',
       debugShowCheckedModeBanner: false,
       theme: AppThemes.main(),
       home: const CarsPage(),

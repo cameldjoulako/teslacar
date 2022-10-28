@@ -62,11 +62,12 @@ class _CarListItemState extends State<CarListItem> {
         padding: EdgeInsets.all(ScreenSize.of(context).isLarge ? 15 : 12.5),
         child: Stack(
           children: [
-            /*Positioned.fill(
+            Positioned.fill(
+              top: 0,
               child: Hero(
                 tag: '__car_${widget.car.id}_image_bg__',
                 child: Container(
-                  //alignment: Alignment.bottomRight,
+                  alignment: Alignment.bottomRight,
                   decoration: BoxDecoration(
                     color: widget.car.bgColor,
                     borderRadius: BorderRadius.circular(35),
@@ -87,33 +88,37 @@ class _CarListItemState extends State<CarListItem> {
                 ),
               ),
             ),
+            
             Positioned.fill(
               top: 0,
               child: Container(
-                alignment: Alignment.topLeft,
-                child: Row(
-                  children: [
-                    CarListItemImageWrapper(
-                      child: CarImage(
+                alignment: Alignment.topCenter,
+                child: CarListItemImageWrapper(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CarImage(
                         widget.car,
                         imageRotationAngle: carImageRotationAngle,
                         imageSize: imageSize,
                         alignment: Alignment.topLeft,
                         hasShadow: false,
                       ),
-                    ),
-                  ],
+                      Text('${widget.car.title}',)
+                      //
+                    ],
+                  ),
                 ),
               ),
             ),
-            */
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: CarListItemText(widget.car),
-                ),
-              ],
+
+            Positioned.fill(
+              bottom: 0,             
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                child: CarListItemText(widget.car),
+              ),
             ),
           ],
         ),

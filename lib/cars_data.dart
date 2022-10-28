@@ -5,9 +5,9 @@ class CarsData {
   static const List<Car> dessertMenu = [
     Car(
       id: 1,
-      price: '250',
+      price: '300',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW i Vision Circular',
       description:
           'Tart Lemon Cheesecake sits atop an almond-graham cracker crust to add a delightful nuttiness to the traditional graham cracker crust. Finish the cheesecake with lemon curd for double the tart pucker!',
       models: [
@@ -24,7 +24,7 @@ class CarsData {
         'Line the base of a 20cm loose bottomed cake tin with baking parchment. Press the biscuit into the bottom of the tin and chill in the fridge while making the topping.'
             'Beat together the mascarpone, caster sugar, lemon zest and juice, until smooth and creamy. Spread over the base and chill for a couple of hours.',
       ],
-      image: 'assets/images/desserts/01-lemon-cheesecake.png',
+      image: 'assets/images/cars/bmw-1.png',
       bgImageName: '01-lemon-cheesecake-bg',
       bgColor: AppColors.white,
     ),
@@ -32,7 +32,7 @@ class CarsData {
       id: 2,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'Soft and chewy on the inside, crisp and golden on the outside — these are the perfect macaroons.',
       models: [
@@ -62,7 +62,7 @@ class CarsData {
         'Add a dollop of buttercream to one macaron shell. Top it with another macaron shell to create a sandwich. Repeat with remaining macaron shells and buttercream.',
         'Place in an airtight container for 24 hours to “bloom”.',
       ],
-      image: 'assets/images/desserts/05-macaroons.png',
+      image: 'assets/images/cars/bmw-2.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -70,7 +70,7 @@ class CarsData {
       id: 3,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "Bake these easy vanilla cupcakes in just 35 minutes. Perfect for birthdays, picnics or whenever you fancy a sweet treat, they're sure to be a crowd-pleaser",
       models: [
@@ -79,7 +79,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/08-cream-cupcakes.png',
+      image: 'assets/images/cars/bmw-3.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -87,7 +87,7 @@ class CarsData {
       id: 4,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "Treat family and friends to this decadent chocolate dessert. It's an indulgent end to a dinner party or weekend family meal",
       models: [
@@ -105,7 +105,7 @@ class CarsData {
         'To make the cheesecake, melt the chocolate in short bursts in the microwave, then leave to cool slightly. Whip the cream in a large bowl using an electric whisk until soft peaks form, then fold in the cocoa powder. Beat the cream cheese and sugar together, then fold in the cream mixture and the cooled chocolate.',
         'Spoon the cheesecake mixture over the biscuit base, levelling it out with the back of a spoon. Transfer to the freezer and freeze for 2 hrs, or until set. Remove from the tin and leave at room temperature to soften for about 20 mins before serving.',
       ],
-      image: 'assets/images/desserts/02-chocolate-cake-1.png',
+      image: 'assets/images/cars/bmw-4.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -113,7 +113,7 @@ class CarsData {
       id: 5,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "Melons - they're firmer so make a great base for the softer berries and fruits. Tropical fruit - the top of a pineapple can be included for height, while dragonfruit looks vibrant.",
       models: [
@@ -122,7 +122,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/09-fruit-plate.png',
+      image: 'assets/images/cars/bmw-5.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -130,7 +130,7 @@ class CarsData {
       id: 6,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'Moist and fluffy donuts that are baked, not fried, and full of chocolate. Covered in a thick chocolate glaze, these are perfect for any chocoholic who wants a chocolate version of this classic treat.',
       models: [
@@ -155,7 +155,7 @@ class CarsData {
         'Make the chocolate glaze: Melt the chocolate, heavy cream, and butter gently in the microwave (in 30-second intervals, stirring in between) or a double boiler until smooth. Dip the tops of the donuts into the chocolate glaze, and place on a cooling rack to set.',
         'Donuts are best eaten the same day or keep them for up to 3 days in the refrigerator.',
       ],
-      image: 'assets/images/desserts/03-chocolate-donuts.png',
+      image: 'assets/images/cars/bmw-6.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -163,7 +163,7 @@ class CarsData {
       id: 7,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'Jam-packed with fresh strawberries, this strawberry cake is one of the simplest, most delicious cakes you’ll ever make.',
       models: [
@@ -172,7 +172,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/13-strawberry-powdered-cake.png',
+      image: 'assets/images/cars/bmw-7.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -180,7 +180,7 @@ class CarsData {
       id: 8,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "This is a very good everyday cake leavened with baking powder. It's relatively light—it isn't loaded with butter, and it calls for only 2 eggs and 2 percent milk. Mine was perfectly baked after 30 minutes. After 10 minutes on the cooling rack, the cake released from the pans easily.",
       models: [
@@ -205,7 +205,7 @@ class CarsData {
         'Cool the cakes in their pans on a wire rack for 10 minutes, then loosen the edges by running a knife along the sides of the pan. Turn the cakes out onto the racks and cool for at least 1 hour before frosting.',
         'Frost with your choice of frosting and enjoy.',
       ],
-      image: 'assets/images/desserts/04-fluffy-cake.png',
+      image: 'assets/images/cars/bmw-8.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -213,7 +213,7 @@ class CarsData {
       id: 9,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'This White Chocolate Cake is both decadent and delicious! White chocolate is incorporated into the cake layers, the frosting, and the drip for a stunning monochrome effect.',
       models: [
@@ -242,7 +242,7 @@ class CarsData {
         'To make Frosting: In a medium bowl, combine 6 ounces white chocolate, 2 1/2 tablespoons flour and 1 cup milk. Cook over medium heat, stirring constantly, until mixture is very thick. Cool completely.',
         'In large bowl, cream 1 cup butter, 1 cup sugar and 1 teaspoon vanilla; beat until light and fluffy. Gradually add cooled white chocolate mixture. Beat at high speed until it is the consistency of whipped cream. Spread between layers, on top and sides of cake.',
       ],
-      image: 'assets/images/desserts/06-white-cream-cake.png',
+      image: 'assets/images/cars/bmw-9.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -250,7 +250,7 @@ class CarsData {
       id: 10,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'Bake a hearty fruit pie for dessert. Our collection of year-round pastry classics includes apple & blackberry, summer berries, lemon meringue and mince pies.',
       models: [
@@ -259,7 +259,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/14-fruit-pie.png',
+      image: 'assets/images/cars/bmw-10.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -267,7 +267,7 @@ class CarsData {
       id: 11,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "The secret to this cake's fantastic flavor is the tiny amount of bitterness from burnt honey. The slightly tangy whipped cream frosting provides a bit of acidity and lovely light texture, and unlike other frostings, it's not too sweet",
       models: [
@@ -297,7 +297,7 @@ class CarsData {
         'Place a cake layer on a parchment paper round on a pizza pan or serving plate. Spread a cup of frosting evenly on top, almost to the edge. Repeat with cake layers and frosting, pressing layers in smooth-side down. Place last cake layer smooth-side up. Frost top and sides of cake. Cover with crumbs; clean any excess crumbs around base.',
         'Cover with plastic wrap and refrigerate for at least 8 hours to overnight. Transfer to a cake stand using 2 spatulas. Cut and serve.',
       ],
-      image: 'assets/images/desserts/07-honey-cake.png',
+      image: 'assets/images/cars/bmw-11.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -305,7 +305,7 @@ class CarsData {
       id: 12,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'Heavy on the butter and nutmeg, this cake has all the flavors of your favorite cake donut in a convenient square shape.',
       models: [
@@ -314,7 +314,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/11-powdered-cake.png',
+      image: 'assets/images/cars/bmw-12.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -322,7 +322,7 @@ class CarsData {
       id: 13,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "We'll admit it: we go a little crazy during strawberry season. Though easy to grow, these sweet berries just taste better when you get them in season, as opposed to buying them at other times of the year.",
       models: [
@@ -331,7 +331,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/10-strawberries.png',
+      image: 'assets/images/cars/bmw-13.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -339,7 +339,7 @@ class CarsData {
       id: 14,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           'The Best Chocolate Cake Car – A one bowl chocolate cake car that is quick, easy, and delicious! Updated with gluten-free, dairy-free, and egg-free options!',
       models: [
@@ -348,7 +348,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/12-chocolate-cake-2.png',
+      image: 'assets/images/cars/bmw-14.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),
@@ -356,7 +356,7 @@ class CarsData {
       id: 15,
       price: '250',
       date: '2020',
-      title: 'Tesla BMW i',
+      title: 'BMW Serie -',
       description:
           "This was my grandmother's apple pie car. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions.",
       models: [
@@ -365,7 +365,7 @@ class CarsData {
       instructions: [
         '',
       ],
-      image: 'assets/images/desserts/15-apple-pie.png',
+      image: 'assets/images/cars/bmw-15.png',
       bgImageName: '',
       bgColor: AppColors.white,
     ),

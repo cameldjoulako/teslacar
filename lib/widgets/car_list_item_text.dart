@@ -18,37 +18,41 @@ class CarListItemText extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(
           left: 20,
-          right: 20,
+          right: 10,
           top: ScreenSize.of(context).isLarge ? 40 : 20,
           bottom: 20,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: ScreenSize.of(context).isLarge
-              ? MainAxisAlignment.start
-              : MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Hero(
               tag: '__car_${carItem.id}_title__',
               child: Text(
-                carItem.price,
+                '\$${carItem.price}',
                 style: Theme.of(context).textTheme.headline4!.copyWith(
                       color: AppColors.textColorFromBackground(carItem.bgColor),
                     ),
               ),
             ),
-            const SizedBox(height: 10),
+            //const SizedBox(height: 5),
             Flexible(
               child: Hero(
                 tag: '__car_${carItem.id}_description__',
-                child: Text(
-                  carItem.description,
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                        color:
-                            AppColors.textColorFromBackground(carItem.bgColor),
-                      ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "Acheter",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
