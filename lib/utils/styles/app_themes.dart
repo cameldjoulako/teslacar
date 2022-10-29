@@ -9,9 +9,9 @@ class AppThemes {
       primarySwatch: AppColors.primaryMaterialColor,
       brightness: isDark ? Brightness.dark : Brightness.light,
       fontFamily: AppTextStyles.fontFamily,
-      scaffoldBackgroundColor: isDark ? AppColors.black : AppColors.sugar,
+      scaffoldBackgroundColor: isDark ? AppColors.black : AppColors.primaryLighter,
       appBarTheme: AppBarTheme(
-        backgroundColor: isDark ? AppColors.black : AppColors.sugar,
+        backgroundColor: isDark ? AppColors.black : AppColors.primaryLighter,
         elevation: 0,
       ),
       shadowColor: isDark

@@ -27,25 +27,33 @@ class CarImage extends StatelessWidget {
       child: Hero(
         tag: '__car_${car.id}_image__',
         // Todo: MAYBE add a TweenAnimationBuilder for smoother animation??
-        child: SizedBox(
-          width: (imageSize),
-          height: imageSize,
-          child: Stack(
+        child: Stack(
             clipBehavior: Clip.none,
             children: [
               if (hasShadow) _buildShadow(),
               Positioned.fill(
+                top:-50,
                 child: Transform.rotate(
                   angle: imageRotationAngle,
-                  child: Image.asset(
-                    car.image,
-                    width: imageSize,
+                  child: Container(
+                    alignment: Alignment.topCenter,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          car.image,
+                          width: imageSize,
+                        ),
+                        Text(car.title,)
+                      ],
+                    ),
                   ),
                 ),
               ),
             ],
           ),
-        ),
+        
       ),
     );
   }
@@ -58,7 +66,7 @@ class CarImage extends StatelessWidget {
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: AppColors.orangeDark.withOpacity(0.5),
+            color: AppColors.blue.withOpacity(0.5),
             blurRadius: 10,
           ),
         ],

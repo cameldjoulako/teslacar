@@ -59,7 +59,7 @@ class _CarListItemState extends State<CarListItem> {
         });
       },
       child: Padding(
-        padding: EdgeInsets.all(ScreenSize.of(context).isLarge ? 15 : 12.5),
+        padding: const EdgeInsets.all(15),
         child: Stack(
           children: [
             Positioned.fill(
@@ -67,18 +67,13 @@ class _CarListItemState extends State<CarListItem> {
               child: Hero(
                 tag: '__car_${widget.car.id}_image_bg__',
                 child: Container(
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: widget.car.bgColor,
                     borderRadius: BorderRadius.circular(35),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.orangeDark.withOpacity(
-                          AppColors.getBrightness(widget.car.bgColor) ==
-                                  Brightness.dark
-                              ? 0.5
-                              : 0.2,
-                        ),
+                        color: AppColors.blue.withOpacity(0.5),
                         blurRadius: 10,
                         offset: const Offset(0, 10),
                       ),
@@ -88,33 +83,20 @@ class _CarListItemState extends State<CarListItem> {
                 ),
               ),
             ),
-            
             Positioned.fill(
               top: 0,
-              child: Container(
-                alignment: Alignment.topCenter,
-                child: CarListItemImageWrapper(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CarImage(
-                        widget.car,
-                        imageRotationAngle: carImageRotationAngle,
-                        imageSize: imageSize,
-                        alignment: Alignment.topLeft,
-                        hasShadow: false,
-                      ),
-                      Text('${widget.car.title}',)
-                      //
-                    ],
-                  ),
+              child: CarListItemImageWrapper(
+                child: CarImage(
+                  widget.car,
+                  imageRotationAngle: carImageRotationAngle,
+                  imageSize: imageSize,
+                  alignment: Alignment.topCenter,
+                  hasShadow: false,
                 ),
               ),
             ),
-
             Positioned.fill(
-              bottom: 0,             
+              top: 25,
               child: Container(
                 alignment: Alignment.bottomCenter,
                 child: CarListItemText(widget.car),

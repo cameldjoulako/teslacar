@@ -15,6 +15,7 @@ class AppColors {
   static const Color pinkLight = Color(0xffF9B7B6);
   static const Color green = Color(0xffADBE56);
   static const Color red = Color(0xffCF252F);
+  static const Color blue = Color.fromARGB(255, 37, 48, 207);
 
   static MaterialColor primaryMaterialColor =
       getMaterialColorFromColor(AppColors.primary);

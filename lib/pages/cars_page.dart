@@ -21,7 +21,7 @@ class _CarsPageState extends State<CarsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tesla Cars'),
+        title: const Text('Faite un choix de voiture'),
       ),
       body: NotificationListener<UserScrollNotification>(
         onNotification: (UserScrollNotification notification) {
