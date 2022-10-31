@@ -118,7 +118,7 @@ class _CarPageState extends State<CarPage> {
                         intervalStart: 0.5,
                         keepAlive: true,
                         child: Text(
-                          'INGREDIENTS',
+                          'Caractéristiques',
                           style: Theme.of(context).textTheme.headline5,
                         ),
                       ),

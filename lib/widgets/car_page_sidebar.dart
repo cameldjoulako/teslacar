@@ -21,7 +21,7 @@ class CarPageSidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
-    return AdaptiveOffsetEffect.builder(
+    return Container(
       width: screenSize.width / 2,
       height: screenSize.height,
       child: CarPageImageBg(
@@ -31,7 +31,7 @@ class CarPageSidebar extends StatelessWidget {
           topRight: Radius.circular(35),
         ),
       ),
-      childBuilder: (context, offset, child) => Stack(
+      /* childBuilder: (context, offset, child) => Stack(
         children: [
           child!,
           if (car.bgImageName.isNotEmpty)
@@ -63,12 +63,12 @@ class CarPageSidebar extends StatelessWidget {
             top: 20,
             left: 20,
             child: AppBarLeading(
-              text: 'Back to Cars list',
+              text: 'Retour liste des voitures',
               popValue: imageRotationAngle,
             ),
           ),
         ],
-      ),
+      ), */
     );
   }
 }
