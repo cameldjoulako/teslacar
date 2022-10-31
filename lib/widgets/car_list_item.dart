@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/models/car.dart';
 import 'package:teslacar/cars_layout.dart';
@@ -62,12 +61,10 @@ class _CarListItemState extends State<CarListItem> {
         padding: const EdgeInsets.all(15),
         child: Stack(
           children: [
-            Positioned.fill(
-              top: 0,
+            Positioned(
               child: Hero(
                 tag: '__car_${widget.car.id}_image_bg__',
                 child: Container(
-                  alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: widget.car.bgColor,
                     borderRadius: BorderRadius.circular(35),
@@ -79,7 +76,6 @@ class _CarListItemState extends State<CarListItem> {
                       ),
                     ],
                   ),
-                  // child: CarListItemImage(car),
                 ),
               ),
             ),
@@ -90,17 +86,13 @@ class _CarListItemState extends State<CarListItem> {
                   widget.car,
                   imageRotationAngle: carImageRotationAngle,
                   imageSize: imageSize,
-                  alignment: Alignment.topCenter,
                   hasShadow: false,
                 ),
               ),
             ),
             Positioned.fill(
-              top: 25,
-              child: Container(
-                alignment: Alignment.bottomCenter,
-                child: CarListItemText(widget.car),
-              ),
+              top: 90,
+              child: CarListItemText(widget.car),
             ),
           ],
         ),

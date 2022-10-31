@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:teslacar/utils/styles/app_themes.dart';
 import 'package:teslacar/models/car.dart';
 import 'package:teslacar/cars_data.dart';

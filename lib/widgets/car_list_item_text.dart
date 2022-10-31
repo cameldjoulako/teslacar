@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/models/car.dart';
 import 'package:teslacar/widgets/car_list_item_text_wrapper.dart';
@@ -31,6 +30,7 @@ class CarListItemText extends StatelessWidget {
                 '\$${carItem.price}',
                 style: Theme.of(context).textTheme.headline4!.copyWith(
                       color: AppColors.textColorFromBackground(carItem.bgColor),
+                      fontSize: 35,
                     ),
               ),
             ),
@@ -50,10 +50,10 @@ class CarListItemText extends StatelessWidget {
                   onPressed: () {},
                   child: const Padding(
                     padding: EdgeInsets.only(
-                      top: 10,
-                      bottom: 10,
-                      left: 30,
-                      right: 50,
+                      top: 15,
+                      bottom: 15,
+                      left: 35,
+                      right: 55,
                     ),
                     child: Text(
                       "Détails",

@@ -3,7 +3,6 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:teslacar/utils/screen_size.dart';
-import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/widgets/fade_in_effect.dart';
 import 'package:teslacar/widgets/models_section.dart';
 import 'package:teslacar/widgets/descriptions_section.dart';
@@ -60,8 +59,7 @@ class _CarPageState extends State<CarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
-      //widget.car.bgColor == AppColors.sugar ? AppColors.yellow : null,
+      backgroundColor: Colors.blue.shade200,
       body: Row(
         children: [
           if (ScreenSize.of(context).isLarge)

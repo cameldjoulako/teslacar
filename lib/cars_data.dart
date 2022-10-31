@@ -7,7 +7,7 @@ class CarsData {
       id: 1,
       price: '300',
       date: '2020',
-      title: 'BMW i Vision Circular',
+      title: 'BMW Serie A',
       description:
           'Tart Lemon Cheesecake sits atop an almond-graham cracker crust to add a delightful nuttiness to the traditional graham cracker crust. Finish the cheesecake with lemon curd for double the tart pucker!',
       models: [
@@ -32,7 +32,7 @@ class CarsData {
       id: 2,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie B',
       description:
           'Soft and chewy on the inside, crisp and golden on the outside — these are the perfect macaroons.',
       models: [
@@ -70,7 +70,7 @@ class CarsData {
       id: 3,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie C',
       description:
           "Bake these easy vanilla cupcakes in just 35 minutes. Perfect for birthdays, picnics or whenever you fancy a sweet treat, they're sure to be a crowd-pleaser",
       models: [
@@ -87,7 +87,7 @@ class CarsData {
       id: 4,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie D',
       description:
           "Treat family and friends to this decadent chocolate dessert. It's an indulgent end to a dinner party or weekend family meal",
       models: [
@@ -113,7 +113,7 @@ class CarsData {
       id: 5,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie E',
       description:
           "Melons - they're firmer so make a great base for the softer berries and fruits. Tropical fruit - the top of a pineapple can be included for height, while dragonfruit looks vibrant.",
       models: [
@@ -130,7 +130,7 @@ class CarsData {
       id: 6,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie F',
       description:
           'Moist and fluffy donuts that are baked, not fried, and full of chocolate. Covered in a thick chocolate glaze, these are perfect for any chocoholic who wants a chocolate version of this classic treat.',
       models: [
@@ -163,7 +163,7 @@ class CarsData {
       id: 7,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie G',
       description:
           'Jam-packed with fresh strawberries, this strawberry cake is one of the simplest, most delicious cakes you’ll ever make.',
       models: [
@@ -180,7 +180,7 @@ class CarsData {
       id: 8,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie H',
       description:
           "This is a very good everyday cake leavened with baking powder. It's relatively light—it isn't loaded with butter, and it calls for only 2 eggs and 2 percent milk. Mine was perfectly baked after 30 minutes. After 10 minutes on the cooling rack, the cake released from the pans easily.",
       models: [
@@ -197,13 +197,7 @@ class CarsData {
         'Gather the models. Preheat the oven to 350 F.',
         'Butter and flour two 9-inch cake pans. If desired, line the bottom with a circle of parchment',
         'Combine the sugar, flour, baking powder, and salt in the bowl of a stand mixer fitted with the paddle attachment. Mix until the dry models are combined.',
-        'With the mixer on the lowest speed, add the butter one chunk at a time and blend until the mixture looks sandy, between 30 seconds and 1 minute. Scrape down the bowl and paddle with a rubber spatula.',
-        'Add the vanilla extract and, with the mixer on low, pour in the milk. Stop and scrape, then mix for another minute.',
-        'Add the first egg and mix on medium-low until completely incorporated. Add the second egg and do the same. Scrape down the bowl and mix until fluffy on medium speed, about 30 seconds.',
-        'Pour the batter into the prepared pans and give each one a couple of solid taps on the countertop to release any air bubbles. Transfer the pans to the preheated oven.',
-        'Bake for about 30 minutes, or until a toothpick inserted into the center comes out clean or with a crumb or two attached. The tops will be golden brown, the edges will pull away from the sides of the pan, and the cakes will spring back when you touch them.',
-        'Cool the cakes in their pans on a wire rack for 10 minutes, then loosen the edges by running a knife along the sides of the pan. Turn the cakes out onto the racks and cool for at least 1 hour before frosting.',
-        'Frost with your choice of frosting and enjoy.',
+        'With the mixer on the lowest spee',
       ],
       image: 'assets/images/cars/bmw-8.png',
       bgImageName: '',
@@ -213,7 +207,7 @@ class CarsData {
       id: 9,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie I',
       description:
           'This White Chocolate Cake is both decadent and delicious! White chocolate is incorporated into the cake layers, the frosting, and the drip for a stunning monochrome effect.',
       models: [
@@ -250,7 +244,7 @@ class CarsData {
       id: 10,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie J',
       description:
           'Bake a hearty fruit pie for dessert. Our collection of year-round pastry classics includes apple & blackberry, summer berries, lemon meringue and mince pies.',
       models: [
@@ -267,7 +261,7 @@ class CarsData {
       id: 11,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie K',
       description:
           "The secret to this cake's fantastic flavor is the tiny amount of bitterness from burnt honey. The slightly tangy whipped cream frosting provides a bit of acidity and lovely light texture, and unlike other frostings, it's not too sweet",
       models: [
@@ -305,7 +299,7 @@ class CarsData {
       id: 12,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie L',
       description:
           'Heavy on the butter and nutmeg, this cake has all the flavors of your favorite cake donut in a convenient square shape.',
       models: [
@@ -322,7 +316,7 @@ class CarsData {
       id: 13,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie M',
       description:
           "We'll admit it: we go a little crazy during strawberry season. Though easy to grow, these sweet berries just taste better when you get them in season, as opposed to buying them at other times of the year.",
       models: [
@@ -339,7 +333,7 @@ class CarsData {
       id: 14,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie N',
       description:
           'The Best Chocolate Cake Car – A one bowl chocolate cake car that is quick, easy, and delicious! Updated with gluten-free, dairy-free, and egg-free options!',
       models: [
@@ -356,7 +350,7 @@ class CarsData {
       id: 15,
       price: '250',
       date: '2020',
-      title: 'BMW Serie -',
+      title: 'BMW Serie V',
       description:
           "This was my grandmother's apple pie car. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions.",
       models: [

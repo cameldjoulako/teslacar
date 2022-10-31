@@ -26,34 +26,40 @@ class CarImage extends StatelessWidget {
       alignment: alignment,
       child: Hero(
         tag: '__car_${car.id}_image__',
-        // Todo: MAYBE add a TweenAnimationBuilder for smoother animation??
         child: Stack(
-            clipBehavior: Clip.none,
-            children: [
-              if (hasShadow) _buildShadow(),
-              Positioned.fill(
-                top:-50,
-                child: Transform.rotate(
-                  angle: imageRotationAngle,
-                  child: Container(
-                    alignment: Alignment.topCenter,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          car.image,
-                          width: imageSize,
+          clipBehavior: Clip.none,
+          children: [
+            if (hasShadow) _buildShadow(),
+            Positioned.fill(
+              top: -148,
+              child: Transform.rotate(
+                angle: imageRotationAngle,
+                child: Container(
+                  alignment: Alignment.topCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        car.image,
+                        width: 230,
+                        height: 350,
+                      ),
+                      Text(
+                        car.title,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          //color: Colors.white,
+                          fontSize: 18,
                         ),
-                        Text(car.title,)
-                      ],
-                    ),
+                      )
+                    ],
                   ),
                 ),
               ),
-            ],
-          ),
-        
+            ),
+          ],
+        ),
       ),
     );
   }
