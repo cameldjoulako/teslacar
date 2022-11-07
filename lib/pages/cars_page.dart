@@ -21,7 +21,7 @@ class _CarsPageState extends State<CarsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Faite un choix de voiture'),
+        title: const Text('Choisir une Voiture'),
       ),
       body: NotificationListener<UserScrollNotification>(
         onNotification: (UserScrollNotification notification) {
@@ -42,12 +42,12 @@ class _CarsPageState extends State<CarsPage> {
             crossAxisCount: CarsLayout.of(context).gridCrossAxisCount,
             childAspectRatio: CarsLayout.of(context).gridChildAspectRatio,
           ),
-          itemCount: CarsData.dessertMenu.length,
+          itemCount: CarsData.carModel.length,
           cacheExtent: 0,
           itemBuilder: (context, i) {
             return ValueListenableBuilder(
               valueListenable: scrollDirectionNotifier,
-              child: CarListItem(CarsData.dessertMenu[i]),
+              child: CarListItem(CarsData.carModel[i]),
               builder: (context, ScrollDirection scrollDirection, child) {
                 return CarListItemWrapper(
                   scrollDirection: scrollDirection,

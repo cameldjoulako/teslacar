@@ -21,8 +21,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void didChangeDependencies() {
     if (_isInit) {
-      for (Car menuItem in CarsData.dessertMenu) {
-        precacheImage(Image.asset(menuItem.image).image, context);
+      for (Car carItem in CarsData.carModel) {
+        precacheImage(Image.asset(carItem.image).image, context);
       }
     }
     _isInit = false;

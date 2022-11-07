@@ -5,6 +5,7 @@ class Car {
   final String title;
   final String price;
   final String date;
+  final String rate;
   final String description;
   final List<String> models;
   final List<String> instructions;
@@ -17,6 +18,7 @@ class Car {
     required this.title,
     required this.price,
     required this.date,
+    required this.rate,
     required this.description,
     required this.models,
     required this.instructions,

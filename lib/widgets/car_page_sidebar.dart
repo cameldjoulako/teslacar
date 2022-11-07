@@ -4,8 +4,7 @@ import 'package:teslacar/widgets/app_bar_leading.dart';
 import 'package:teslacar/widgets/fade_in_effect.dart';
 import 'package:teslacar/models/car.dart';
 import 'package:teslacar/widgets/car_image.dart';
-import 'package:teslacar/widgets/car_image_pattern_mouse.dart';
-import 'package:teslacar/widgets/car_page_image_bg.dart';
+import 'package:teslacar/utils/styles/app_colors.dart';
 
 class CarPageSidebar extends StatelessWidget {
   const CarPageSidebar(
@@ -21,7 +20,57 @@ class CarPageSidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
-    return Container(
+    return Hero(
+      tag: '__car_${car.id}_image_bg__',
+      child: Container(
+        width: screenSize.width / 2,
+        height: screenSize.height,
+        decoration: BoxDecoration(
+          color: car.bgColor,
+          borderRadius: const BorderRadius.only(
+            bottomRight: Radius.circular(35),
+            topRight: Radius.circular(35),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.orangeDark.withOpacity(
+                AppColors.getBrightness(car.bgColor) == Brightness.dark
+                    ? 0.5
+                    : 0.2,
+              ),
+              blurRadius: 10,
+              offset: const Offset(0, 5),
+            ),
+          ],
+        ),
+        alignment: Alignment.center,
+        child: Stack(
+          children: [
+            //child!,
+            Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.4,
+                child: CarImage(
+                  car,
+                  imageRotationAngle: imageRotationAngle,
+                  //shadowOffset: offset * 0.5,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 20,
+              left: 20,
+              child: AppBarLeading(
+                text: 'Retour liste des voitures',
+                popValue: imageRotationAngle,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    /* return Container(
       width: screenSize.width / 2,
       height: screenSize.height,
       child: CarPageImageBg(
@@ -30,45 +79,8 @@ class CarPageSidebar extends StatelessWidget {
           bottomRight: Radius.circular(35),
           topRight: Radius.circular(35),
         ),
+        childBuilder: (context, offset, child) => 
       ),
-      /* childBuilder: (context, offset, child) => Stack(
-        children: [
-          child!,
-          if (car.bgImageName.isNotEmpty)
-            FadeInEffect(
-              intervalStart: 0.5,
-              child: CarImagePatternMouse(
-                car,
-                offset: offset,
-                borderRadius: const BorderRadius.only(
-                  bottomRight: Radius.circular(35),
-                  topRight: Radius.circular(35),
-                ),
-              ),
-            ),
-          IgnorePointer(
-            ignoring: true,
-            child: Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.4,
-                child: CarImage(
-                  car,
-                  imageRotationAngle: imageRotationAngle,
-                  shadowOffset: offset * 0.5,
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 20,
-            left: 20,
-            child: AppBarLeading(
-              text: 'Retour liste des voitures',
-              popValue: imageRotationAngle,
-            ),
-          ),
-        ],
-      ), */
-    );
+    ); */
   }
 }

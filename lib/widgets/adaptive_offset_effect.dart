@@ -1,7 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:teslacar/widgets/gyroscope_effect.dart';
-import 'package:teslacar/widgets/mouse_region_effect.dart';
 
 typedef OffsetEffectBuilder = Widget Function(
   BuildContext context,
@@ -51,37 +48,18 @@ class AdaptiveOffsetEffect extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (defaultTargetPlatform == TargetPlatform.macOS ||
-        defaultTargetPlatform == TargetPlatform.linux) {
-      return childBuilder != null
-          ? MouseRegionEffect.builder(
-              width: width,
-              height: height,
-              maxMovableDistance: maxMovableDistance,
-              offsetMultiplier: offsetMultiplier,
-              childBuilder: childBuilder,
-              child: child,
-            )
-          : MouseRegionEffect(
-              width: width,
-              height: height,
-              maxMovableDistance: maxMovableDistance,
-              offsetMultiplier: offsetMultiplier,
-              child: child,
-            );
-    } else {
-      return childBuilder != null
-          ? GyroscopeEffect.builder(
-              maxMovableDistance: maxMovableDistance,
-              offsetMultiplier: offsetMultiplier,
-              childBuilder: childBuilder,
-              child: child,
-            )
-          : GyroscopeEffect(
-              maxMovableDistance: maxMovableDistance,
-              offsetMultiplier: offsetMultiplier,
-              child: child,
-            );
-    }
+    return TweenAnimationBuilder(
+      tween: Tween<Offset>(
+        begin: Offset.zero,
+        end: const Offset(0, -10),
+      ),
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOutBack,
+      builder: (context, Offset offset, child) => Transform.translate(
+        offset: offset,
+        child: child!,
+      ),
+      child: child,
+    );
   }
 }

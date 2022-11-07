@@ -17,9 +17,13 @@ class CarPageImageBg extends StatelessWidget {
     return Hero(
       tag: '__car_${car.id}_image_bg__',
       child: Container(
+        //child: widget,
         decoration: BoxDecoration(
           color: car.bgColor,
-          borderRadius: borderRadius,
+          borderRadius: const BorderRadius.only(
+            bottomRight: Radius.circular(35),
+            topRight: Radius.circular(35),
+          ),
           boxShadow: [
             BoxShadow(
               color: AppColors.orangeDark.withOpacity(
