@@ -21,7 +21,20 @@ class _CarsPageState extends State<CarsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Choisir une Voiture'),
+        title: const Text(
+          'Choisir une Voiture',
+          style: TextStyle(color: Colors.black, fontSize: 25),
+        ),
+        actions: const [
+          IconButton(
+            icon: Icon(
+              Icons.search_outlined,
+              color: Colors.black,
+              size: 30,
+            ),
+            onPressed: null,
+          )
+        ],
       ),
       body: NotificationListener<UserScrollNotification>(
         onNotification: (UserScrollNotification notification) {
@@ -36,7 +49,8 @@ class _CarsPageState extends State<CarsPage> {
             left: ScreenSize.of(context).isLarge ? 5 : 3.5,
             right: ScreenSize.of(context).isLarge ? 5 : 3.5,
             top: 10,
-            bottom: MediaQuery.of(context).padding.bottom + 20,
+            //bottom: MediaQuery.of(context).padding.bottom,
+            bottom: 0,
           ),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: CarsLayout.of(context).gridCrossAxisCount,

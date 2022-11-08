@@ -16,7 +16,7 @@ class CarListItemText extends StatelessWidget {
     return CarListItemTextWrapper(
       child: Padding(
         padding: const EdgeInsets.only(
-          left: 25,
+          left: 20,
           right: 0,
           bottom: 0,
         ),
@@ -26,12 +26,24 @@ class CarListItemText extends StatelessWidget {
           children: [
             Hero(
               tag: '__car_${carItem.id}_title__',
-              child: Text(
-                '\$${carItem.price}',
-                style: Theme.of(context).textTheme.headline4!.copyWith(
-                      color: AppColors.textColorFromBackground(carItem.bgColor),
-                      fontSize: 35,
-                    ),
+              child: Row(
+                children: [
+                  Text(
+                    '\$${carItem.price}',
+                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                          color: AppColors.textColorFromBackground(
+                              carItem.bgColor),
+                          fontSize: 25,
+                        ),
+                  ),
+                  Text(
+                    '/day',
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          color: Colors.grey.shade600,
+                          fontSize: 25,
+                        ),
+                  ),
+                ],
               ),
             ),
             Flexible(
@@ -50,9 +62,9 @@ class CarListItemText extends StatelessWidget {
                   onPressed: () {},
                   child: const Padding(
                     padding: EdgeInsets.only(
-                      top: 15,
-                      bottom: 15,
-                      left: 35,
+                      top: 18,
+                      bottom: 18,
+                      left: 38,
                       right: 55,
                     ),
                     child: Text(
@@ -60,7 +72,7 @@ class CarListItemText extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 17,
                       ),
                     ),
                   ),

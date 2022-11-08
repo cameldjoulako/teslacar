@@ -91,7 +91,7 @@ class _CarListItemState extends State<CarListItem> {
               ),
             ),
             Positioned.fill(
-              top: 90,
+              top: 80,
               child: CarListItemText(widget.car),
             ),
           ],

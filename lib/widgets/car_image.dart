@@ -42,9 +42,10 @@ class CarImage extends StatelessWidget {
                     children: [
                       Image.asset(
                         car.image,
-                        width: 230,
-                        height: 350,
+                        width: 170,
+                        height: 360,
                       ),
+                      const SizedBox(width: 40),
                       Text(
                         car.title,
                         style: const TextStyle(

@@ -1,14 +1,5 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:teslacar/utils/screen_size.dart';
-import 'package:teslacar/widgets/fade_in_effect.dart';
-import 'package:teslacar/widgets/models_section.dart';
-import 'package:teslacar/widgets/descriptions_section.dart';
 import 'package:teslacar/models/car.dart';
-import 'package:teslacar/widgets/car_page_sidebar.dart';
-import 'package:teslacar/widgets/car_page_sliver_app_bar.dart';
 import '../utils/styles/app_colors.dart';
 
 class CarPage extends StatefulWidget {
@@ -26,34 +17,13 @@ class CarPage extends StatefulWidget {
 }
 
 class _CarPageState extends State<CarPage> {
-  final ScrollController scrollController = ScrollController();
-  late final ValueNotifier<double> imageRotationAngleNotifier;
-
-  void scrollListener() {
-    ScrollDirection scrollDirection =
-        scrollController.position.userScrollDirection;
-    double scrollPosition = scrollController.position.pixels.abs();
-    if (scrollDirection == ScrollDirection.forward) {
-      imageRotationAngleNotifier.value +=
-          (scrollPosition * math.pi / 180) * 0.01;
-    } else if (scrollDirection == ScrollDirection.reverse) {
-      imageRotationAngleNotifier.value -=
-          (scrollPosition * math.pi / 180) * 0.01;
-    }
-  }
-
   @override
   void initState() {
-    scrollController.addListener(scrollListener);
-    imageRotationAngleNotifier =
-        ValueNotifier<double>(widget.initialImageRotationAngle);
     super.initState();
   }
 
   @override
   void dispose() {
-    scrollController.removeListener(scrollListener);
-    imageRotationAngleNotifier.dispose();
     super.dispose();
   }
 
@@ -90,11 +60,8 @@ class _CarPageState extends State<CarPage> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Expanded(
-            flex: 1,
             child: Container(
               padding: const EdgeInsets.all(15.0),
-              //width: MediaQuery.of(context).size.width,
-              //height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.only(
@@ -164,7 +131,7 @@ class _CarPageState extends State<CarPage> {
                                     size: 20,
                                   ),
                                   const SizedBox(
-                                    width: 10,
+                                    width: 9,
                                   ),
                                   Text(
                                     widget.car.rate,
@@ -185,15 +152,15 @@ class _CarPageState extends State<CarPage> {
                     child: Stack(
                       children: [
                         Positioned(
-                          //top: 0,
+                          //top: 10,
                           child: Center(
                             child: Image(
-                              width: 325,
+                              width: 300,
                               image: AssetImage(widget.car.image),
                             ),
                           ),
                         ),
-                        Positioned(
+                        /* Positioned(
                           //bottom: 10,
                           child: Container(
                             height: 80,
@@ -204,7 +171,7 @@ class _CarPageState extends State<CarPage> {
                               ),
                             ),
                           ),
-                        ),
+                        ), */
                       ],
                     ),
                   )
@@ -213,9 +180,7 @@ class _CarPageState extends State<CarPage> {
             ),
           ),
           Expanded(
-            flex: 1,
             child: Container(
-              height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -223,15 +188,14 @@ class _CarPageState extends State<CarPage> {
                   bottomRight: Radius.circular(50),
                 ),
               ),
-              child: Column(
-                children: [
-                  SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Container(
-                      padding: EdgeInsets.only(left: 20),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.only(left: 20),
                       color: Colors.white,
                       child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 15),
+                        padding: const EdgeInsets.symmetric(vertical: 8),
                         decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
@@ -247,8 +211,8 @@ class _CarPageState extends State<CarPage> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Container(
-                                  margin: const EdgeInsets.only(
-                                      top: 10, bottom: 10),
+                                  margin:
+                                      const EdgeInsets.only(top: 9, bottom: 9),
                                   child: Text(
                                     "Spécifications",
                                     style: Theme.of(context)
@@ -269,7 +233,7 @@ class _CarPageState extends State<CarPage> {
                                 children: [
                                   Container(
                                     padding: const EdgeInsets.only(
-                                        top: 20, bottom: 20),
+                                        top: 18, bottom: 18),
                                     width: 175,
                                     decoration: const BoxDecoration(
                                       color: Colors.black,
@@ -289,7 +253,7 @@ class _CarPageState extends State<CarPage> {
                                           size: 45,
                                         ),
                                         Container(
-                                          margin: EdgeInsets.only(
+                                          margin: const EdgeInsets.only(
                                               left: 50, top: 10),
                                           child: Row(
                                             crossAxisAlignment:
@@ -323,7 +287,7 @@ class _CarPageState extends State<CarPage> {
                                   const SizedBox(width: 10),
                                   Container(
                                     padding: const EdgeInsets.only(
-                                        top: 20, bottom: 20),
+                                        top: 18, bottom: 18),
                                     width: 175,
                                     decoration: const BoxDecoration(
                                       color: Colors.black,
@@ -367,7 +331,7 @@ class _CarPageState extends State<CarPage> {
                                   const SizedBox(width: 10),
                                   Container(
                                     padding: const EdgeInsets.only(
-                                        top: 20, bottom: 20),
+                                        top: 18, bottom: 18),
                                     width: 175,
                                     decoration: const BoxDecoration(
                                       color: Colors.black,
@@ -387,8 +351,10 @@ class _CarPageState extends State<CarPage> {
                                           size: 45,
                                         ),
                                         Container(
-                                          margin: EdgeInsets.only(
-                                              left: 50, top: 10),
+                                          margin: const EdgeInsets.only(
+                                            left: 50,
+                                            top: 10,
+                                          ),
                                           child: Row(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.center,
@@ -433,7 +399,7 @@ class _CarPageState extends State<CarPage> {
                                         children: [
                                           Container(
                                             margin:
-                                                const EdgeInsets.only(top: 20),
+                                                const EdgeInsets.only(top: 18),
                                             child: Text(
                                               "Location",
                                               style: Theme.of(context)
@@ -484,8 +450,8 @@ class _CarPageState extends State<CarPage> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Container(
-                                            margin:
-                                                const EdgeInsets.only(top: 15),
+                                            margin: const EdgeInsets.only(
+                                                top: 15, bottom: 15),
                                             child: Row(
                                               children: [
                                                 const Icon(
@@ -513,14 +479,77 @@ class _CarPageState extends State<CarPage> {
                                     ),
                                   ],
                                 ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text(
+                                          '\$${widget.car.price}',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline4!
+                                              .copyWith(
+                                                color: AppColors
+                                                    .textColorFromBackground(
+                                                        widget.car.bgColor),
+                                                fontSize: 30,
+                                              ),
+                                        ),
+                                        Text(
+                                          '/day',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .subtitle1!
+                                              .copyWith(
+                                                color: Colors.grey.shade600,
+                                                fontSize: 20,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Flexible(
+                                      child: TextButton(
+                                        style: TextButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+                                          shape: const RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(20),
+                                              bottomRight: Radius.circular(20),
+                                            ),
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                        child: const Padding(
+                                          padding: EdgeInsets.only(
+                                            top: 15,
+                                            bottom: 15,
+                                            left: 35,
+                                            right: 55,
+                                          ),
+                                          child: Text(
+                                            "Book now",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ],
                             )
                           ],
                         ),
                       ),
                     ),
-                  )
-                ],
+                  ],
+                ),
               ),
             ),
           ),
