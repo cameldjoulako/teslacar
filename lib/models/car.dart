@@ -6,9 +6,6 @@ class Car {
   final String price;
   final String date;
   final String rate;
-  final String description;
-  final List<String> models;
-  final List<String> instructions;
   final String image;
   final String bgImageName;
   final Color bgColor;
@@ -19,9 +16,6 @@ class Car {
     required this.price,
     required this.date,
     required this.rate,
-    required this.description,
-    required this.models,
-    required this.instructions,
     required this.image,
     required this.bgImageName,
     required this.bgColor,
