@@ -92,7 +92,6 @@ class CarImage extends StatelessWidget {
         child: child,
       );
     }
-
     return child;
   }
 }

@@ -37,7 +37,6 @@ class _CarListItemState extends State<CarListItem> {
                 (BuildContext context, Animation<double> animation, _) {
               return CarPage(
                 widget.car,
-                initialImageRotationAngle: carImageRotationAngle,
               );
             },
             transitionsBuilder: (BuildContext context,
