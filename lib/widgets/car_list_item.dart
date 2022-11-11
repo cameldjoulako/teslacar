@@ -60,20 +60,17 @@ class _CarListItemState extends State<CarListItem> {
         child: Stack(
           children: [
             Positioned(
-              child: Hero(
-                tag: '__car_${widget.car.id}_image_bg__',
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: widget.car.bgColor,
-                    borderRadius: BorderRadius.circular(35),
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColors.blue.withOpacity(0.5),
-                        blurRadius: 10,
-                        offset: const Offset(0, 10),
-                      ),
-                    ],
-                  ),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: widget.car.bgColor,
+                  borderRadius: BorderRadius.circular(35),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.blue.withOpacity(0.5),
+                      blurRadius: 10,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -89,7 +86,7 @@ class _CarListItemState extends State<CarListItem> {
               ),
             ),
             Positioned.fill(
-              top: 108,
+              top: 106,
               child: CarListItemText(widget.car),
             ),
           ],

@@ -24,11 +24,11 @@ class CarListItemText extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Hero(
-              tag: '__car_${carItem.id}_title__',
-              child: Row(
-                children: [
-                  Text(
+            Row(
+              children: [
+                Hero(
+                  tag: 'car_${carItem.id}_price',
+                  child: Text(
                     '\$${carItem.price}',
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                           color: AppColors.textColorFromBackground(
@@ -36,44 +36,41 @@ class CarListItemText extends StatelessWidget {
                           fontSize: 25,
                         ),
                   ),
-                  Text(
-                    '/day',
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                          color: Colors.grey.shade600,
-                          fontSize: 25,
-                        ),
-                  ),
-                ],
-              ),
+                ),
+                Text(
+                  '/day',
+                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                        color: Colors.grey.shade600,
+                        fontSize: 25,
+                      ),
+                ),
+              ],
             ),
             Flexible(
-              child: Hero(
-                tag: '__car_${carItem.id}_details',
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.blueAccent,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
-                        bottomRight: Radius.circular(30),
-                      ),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      bottomRight: Radius.circular(30),
                     ),
                   ),
-                  onPressed: () {},
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                      top: 15,
-                      bottom: 15,
-                      left: 35,
-                      right: 55,
-                    ),
-                    child: Text(
-                      "Détails",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 17,
-                      ),
+                ),
+                onPressed: () {},
+                child: const Padding(
+                  padding: EdgeInsets.only(
+                    top: 15,
+                    bottom: 15,
+                    left: 35,
+                    right: 55,
+                  ),
+                  child: Text(
+                    "Détails",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 17,
                     ),
                   ),
                 ),

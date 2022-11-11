@@ -127,29 +127,26 @@ class _CarPageState extends State<CarPage> {
                                   ],
                                 ),
                               ),
-                              Hero(
-                                tag: 'car_${widget.car.id}_rate',
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                      size: 20,
-                                    ),
-                                    const SizedBox(
-                                      width: 9,
-                                    ),
-                                    Text(
-                                      widget.car.rate,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline5!
-                                          .copyWith(color: Colors.white),
-                                    ),
-                                  ],
-                                ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.yellow,
+                                    size: 20,
+                                  ),
+                                  const SizedBox(
+                                    width: 9,
+                                  ),
+                                  Text(
+                                    widget.car.rate,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline5!
+                                        .copyWith(color: Colors.white),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -525,31 +522,34 @@ class _CarPageState extends State<CarPage> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            '\$${widget.car.price}',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .headline4!
-                                                .copyWith(
-                                                  color: AppColors
-                                                      .textColorFromBackground(
-                                                          widget.car.bgColor),
-                                                  fontSize: 30,
-                                                ),
-                                          ),
-                                          Text(
-                                            '/day',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .subtitle1!
-                                                .copyWith(
-                                                  color: Colors.grey.shade600,
-                                                  fontSize: 20,
-                                                ),
-                                          ),
-                                        ],
+                                      Hero(
+                                        tag: 'car_${widget.car.id}_price',
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              '\$${widget.car.price}',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline4!
+                                                  .copyWith(
+                                                    color: AppColors
+                                                        .textColorFromBackground(
+                                                            widget.car.bgColor),
+                                                    fontSize: 30,
+                                                  ),
+                                            ),
+                                            Text(
+                                              '/day',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1!
+                                                  .copyWith(
+                                                    color: Colors.grey.shade600,
+                                                    fontSize: 20,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                       Flexible(
                                         child: TextButton(
