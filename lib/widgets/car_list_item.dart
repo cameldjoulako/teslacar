@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/models/car.dart';
-import 'package:teslacar/cars_layout.dart';
 import 'package:teslacar/pages/car_page.dart';
 import 'package:teslacar/widgets/car_image.dart';
 import 'package:teslacar/widgets/car_list_item_gesture_detector.dart';
@@ -25,7 +24,7 @@ class _CarListItemState extends State<CarListItem> {
 
   @override
   Widget build(BuildContext context) {
-    double imageSize = CarsLayout.of(context).carImageSize;
+    double imageSize = 200;
 
     return CarListItemGestureDetector(
       onTap: () {
@@ -79,7 +78,7 @@ class _CarListItemState extends State<CarListItem> {
               ),
             ),
             Positioned.fill(
-              top: 0,
+              top: 5,
               child: CarListItemImageWrapper(
                 child: CarImage(
                   widget.car,
@@ -90,7 +89,7 @@ class _CarListItemState extends State<CarListItem> {
               ),
             ),
             Positioned.fill(
-              top: 80,
+              top: 108,
               child: CarListItemText(widget.car),
             ),
           ],

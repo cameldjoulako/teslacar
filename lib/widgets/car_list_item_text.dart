@@ -48,23 +48,23 @@ class CarListItemText extends StatelessWidget {
             ),
             Flexible(
               child: Hero(
-                tag: '__car_${carItem.id}_description__',
+                tag: '__car_${carItem.id}_details',
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Colors.blueAccent,
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
+                        topLeft: Radius.circular(25),
+                        bottomRight: Radius.circular(30),
                       ),
                     ),
                   ),
                   onPressed: () {},
                   child: const Padding(
                     padding: EdgeInsets.only(
-                      top: 18,
-                      bottom: 18,
-                      left: 38,
+                      top: 15,
+                      bottom: 15,
+                      left: 35,
                       right: 55,
                     ),
                     child: Text(

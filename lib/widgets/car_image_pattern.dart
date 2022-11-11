@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/utils/styles/app_colors.dart';
 import 'package:teslacar/models/car.dart';
 
@@ -19,11 +18,8 @@ class CarImagePattern extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String bgImage =
-        ScreenSize.of(context).isLarge ? car.bgImageLg : car.bgImage;
-    AlignmentGeometry alignment = ScreenSize.of(context).isLarge
-        ? Alignment.center
-        : Alignment.bottomCenter;
+    String bgImage = car.bgImage;
+    AlignmentGeometry alignment = Alignment.bottomCenter;
 
     return Stack(
       clipBehavior: Clip.none,

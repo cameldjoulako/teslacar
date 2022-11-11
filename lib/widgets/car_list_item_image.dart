@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:teslacar/models/car.dart';
-import 'package:teslacar/cars_layout.dart';
 import 'package:teslacar/widgets/car_list_item_image_wrapper.dart';
 
 class CarListItemImage extends StatelessWidget {
@@ -15,7 +14,7 @@ class CarListItemImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double imageSize = CarsLayout.of(context).carImageSize;
+    double imageSize = 300;
 
     return CarListItemImageWrapper(
       child: Hero(

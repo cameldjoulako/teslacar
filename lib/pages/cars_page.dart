@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:teslacar/utils/screen_size.dart';
 import 'package:teslacar/cars_data.dart';
-import 'package:teslacar/cars_layout.dart';
 import 'package:teslacar/widgets/car_list_item.dart';
 import 'package:teslacar/widgets/car_list_item_wrapper.dart';
 
@@ -30,7 +28,7 @@ class _CarsPageState extends State<CarsPage> {
             icon: Icon(
               Icons.search_outlined,
               color: Colors.black,
-              size: 30,
+              size: 33,
             ),
             onPressed: null,
           )
@@ -45,16 +43,15 @@ class _CarsPageState extends State<CarsPage> {
           return true;
         },
         child: GridView.builder(
-          padding: EdgeInsets.only(
-            left: ScreenSize.of(context).isLarge ? 5 : 3.5,
-            right: ScreenSize.of(context).isLarge ? 5 : 3.5,
+          padding: const EdgeInsets.only(
+            left: 3.5,
+            right: 3.5,
             top: 10,
-            //bottom: MediaQuery.of(context).padding.bottom,
-            bottom: 0,
+            bottom: 10,
           ),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: CarsLayout.of(context).gridCrossAxisCount,
-            childAspectRatio: CarsLayout.of(context).gridChildAspectRatio,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 1,
+            childAspectRatio: 2,
           ),
           itemCount: CarsData.carModel.length,
           cacheExtent: 0,
