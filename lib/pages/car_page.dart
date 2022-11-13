@@ -522,11 +522,11 @@ class _CarPageState extends State<CarPage> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Hero(
-                                        tag: 'car_${widget.car.id}_price',
-                                        child: Row(
-                                          children: [
-                                            Text(
+                                      Row(
+                                        children: [
+                                          Hero(
+                                            tag: 'car_${widget.car.id}_price',
+                                            child: Text(
                                               '\$${widget.car.price}',
                                               style: Theme.of(context)
                                                   .textTheme
@@ -538,7 +538,10 @@ class _CarPageState extends State<CarPage> {
                                                     fontSize: 30,
                                                   ),
                                             ),
-                                            Text(
+                                          ),
+                                          Hero(
+                                            tag: 'car_${widget.car.id}_date',
+                                            child: Text(
                                               '/day',
                                               style: Theme.of(context)
                                                   .textTheme
@@ -548,8 +551,8 @@ class _CarPageState extends State<CarPage> {
                                                     fontSize: 20,
                                                   ),
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
                                       Flexible(
                                         child: TextButton(
