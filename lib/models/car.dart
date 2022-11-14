@@ -20,10 +20,4 @@ class Car {
     required this.bgImageName,
     required this.bgColor,
   });
-
-  String get bgImage =>
-      bgImageName.isEmpty ? '' : 'assets/images/desserts/$bgImageName.png';
-
-  String get bgImageLg =>
-      bgImageName.isEmpty ? '' : 'assets/images/desserts/$bgImageName-lg.png';
 }
