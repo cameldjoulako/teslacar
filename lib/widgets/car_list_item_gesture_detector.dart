@@ -44,34 +44,21 @@ class _CarListItemGestureDetectorState extends State<CarListItemGestureDetector>
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      onEnter: (_) => animationController.animateTo(
-        0.5,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      ),
-      onExit: (_) => animationController.animateTo(
-        0,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      ),
-      child: GestureDetector(
-        onTap: widget.onTap,
-        onTapDown: (_) => animationController.forward(),
-        onTapCancel: () =>
-            animationController.reverse(from: animationController.value),
-        onTapUp: (_) => animationController.reverse(),
-        child: AnimatedBuilder(
-          animation: animationController,
-          builder: (context, child) {
-            return Transform.scale(
-              scale: scaleAnimation.value,
-              child: widget.child,
-            );
-          },
-          child: widget.child,
-        ),
+    return GestureDetector(
+      onTap: widget.onTap,
+      onTapDown: (_) => animationController.forward(),
+      onTapCancel: () =>
+          animationController.reverse(from: animationController.value),
+      onTapUp: (_) => animationController.reverse(),
+      child: AnimatedBuilder(
+        animation: animationController,
+        builder: (context, child) {
+          return Transform.scale(
+            scale: scaleAnimation.value,
+            child: widget.child,
+          );
+        },
+        child: widget.child,
       ),
     );
   }
