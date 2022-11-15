@@ -20,18 +20,15 @@ class CarListItem extends StatefulWidget {
 }
 
 class _CarListItemState extends State<CarListItem> {
-  double carImageRotationAngle = 0;
-
   @override
   Widget build(BuildContext context) {
     double imageSize = 200;
 
     return CarListItemGestureDetector(
       onTap: () {
-        Navigator.of(context)
-            .push(
+        Navigator.of(context).push(
           PageRouteBuilder(
-            transitionDuration: const Duration(milliseconds: 300),
+            transitionDuration: const Duration(milliseconds: 600),
             pageBuilder:
                 (BuildContext context, Animation<double> animation, _) {
               return CarPage(
@@ -46,14 +43,7 @@ class _CarListItemState extends State<CarListItem> {
               );
             },
           ),
-        )
-            .then((response) {
-          if (response != null && response is double && mounted) {
-            setState(() {
-              carImageRotationAngle = response;
-            });
-          }
-        });
+        );
       },
       child: Padding(
         padding: const EdgeInsets.all(15),
@@ -79,7 +69,6 @@ class _CarListItemState extends State<CarListItem> {
               child: CarListItemImageWrapper(
                 child: CarImage(
                   widget.car,
-                  imageRotationAngle: carImageRotationAngle,
                   imageSize: imageSize,
                   hasShadow: false,
                 ),
