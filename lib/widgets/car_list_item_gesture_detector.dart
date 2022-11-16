@@ -25,7 +25,7 @@ class _CarListItemGestureDetectorState extends State<CarListItemGestureDetector>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 300),
     );
 
     scaleAnimation = Tween<double>(begin: 1, end: 0.9).animate(

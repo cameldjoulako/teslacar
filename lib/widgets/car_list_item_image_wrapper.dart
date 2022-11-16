@@ -59,7 +59,7 @@ class _CarListItemImageWrapperState extends State<CarListItemImageWrapper>
   Widget build(BuildContext context) {
     super.build(context);
     return Transform.translate(
-      offset: const Offset(20, 20),
+      offset: const Offset(10, 20),
       child: AnimatedBuilder(
         animation: animationController,
         child: widget.child,
