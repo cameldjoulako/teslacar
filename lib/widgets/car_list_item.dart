@@ -31,7 +31,7 @@ class _CarListItemState extends State<CarListItem> {
         Navigator.of(context)
             .push(
           PageRouteBuilder(
-            transitionDuration: const Duration(milliseconds: 600),
+            transitionDuration: const Duration(milliseconds: 300),
             pageBuilder:
                 (BuildContext context, Animation<double> animation, _) {
               return CarPage(
