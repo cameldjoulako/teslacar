@@ -30,36 +30,33 @@ class CarImage extends StatelessWidget {
           if (hasShadow) _buildShadow(),
           Positioned.fill(
             top: -148,
-            child: Transform.rotate(
-              angle: imageRotationAngle,
-              child: Container(
-                alignment: Alignment.topCenter,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Hero(
-                      tag: 'car_${car.id}_image',
-                      child: Image.asset(
-                        car.image,
-                        width: 170,
-                        height: 360,
+            child: Container(
+              alignment: Alignment.topCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Hero(
+                    tag: 'car_${car.id}_image',
+                    child: Image.asset(
+                      car.image,
+                      width: 170,
+                      height: 360,
+                    ),
+                  ),
+                  const SizedBox(width: 40),
+                  Hero(
+                    tag: 'car_${car.id}_title',
+                    child: Text(
+                      car.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        //color: Colors.white,
+                        fontSize: 18,
                       ),
                     ),
-                    const SizedBox(width: 40),
-                    Hero(
-                      tag: 'car_${car.id}_title',
-                      child: Text(
-                        car.title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          //color: Colors.white,
-                          fontSize: 18,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
             ),
           ),
