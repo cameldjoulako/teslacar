@@ -81,7 +81,6 @@ class _CarListItemState extends State<CarListItem> {
                   widget.car,
                   imageRotationAngle: carImageRotationAngle,
                   imageSize: imageSize,
-                  hasShadow: false,
                 ),
               ),
             ),
