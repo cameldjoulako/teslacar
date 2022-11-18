@@ -230,7 +230,7 @@ class _CarPageState extends State<CarPage> {
                                 children: [
                                   AnimateInEffect(
                                     keepAlive: true,
-                                    intervalStart: 1 / 3,
+                                    intervalStart: 1 / 5,
                                     child: Container(
                                       padding: const EdgeInsets.only(
                                           top: 18, bottom: 18),
@@ -288,7 +288,7 @@ class _CarPageState extends State<CarPage> {
                                   const SizedBox(width: 10),
                                   AnimateInEffect(
                                     keepAlive: true,
-                                    intervalStart: 2 / 3,
+                                    intervalStart: 2 / 5,
                                     child: Container(
                                       padding: const EdgeInsets.only(
                                           top: 18, bottom: 18),
@@ -336,7 +336,7 @@ class _CarPageState extends State<CarPage> {
                                   const SizedBox(width: 10),
                                   AnimateInEffect(
                                     keepAlive: true,
-                                    intervalStart: 0.80,
+                                    intervalStart: 3 / 5,
                                     child: Container(
                                       padding: const EdgeInsets.only(
                                           top: 18, bottom: 18),
@@ -468,7 +468,7 @@ class _CarPageState extends State<CarPage> {
                                         children: [
                                           AnimateInEffect(
                                             keepAlive: true,
-                                            intervalStart: 0.90,
+                                            intervalStart: 4 / 5,
                                             child: Container(
                                               margin: const EdgeInsets.only(
                                                   top: 15, bottom: 15),
