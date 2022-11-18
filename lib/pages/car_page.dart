@@ -102,7 +102,6 @@ class _CarPageState extends State<CarPage> {
                                 margin: const EdgeInsets.only(left: 20),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  //mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Hero(
                                       tag: 'car_${widget.car.id}_title',
@@ -162,22 +161,10 @@ class _CarPageState extends State<CarPage> {
                           child: Hero(
                             tag: 'car_${widget.car.id}_image',
                             child: Image(
-                              //width: 300,
                               image: AssetImage(widget.car.image),
                             ),
                           ),
                         ),
-                        /* Positioned(
-                          child: Container(
-                            height: 80,
-                            decoration: const BoxDecoration(
-                              //color: Colors.white.withOpacity(),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(200),
-                              ),
-                            ),
-                          ),
-                        ), */
                       ],
                     ),
                   )
